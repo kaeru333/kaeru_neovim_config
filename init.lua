@@ -18,4 +18,6 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     end
 })
 
-require('lualine').setup()
+require('lualine').setup{
+	teme = 'tokyonight',
+}

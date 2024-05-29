@@ -3,7 +3,8 @@ require('mason').setup()
 
 -- Mason LSP Config setup
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "tsserver", "pyright" },
+    ensure_installed = { "lua_ls", "tsserver", "pyright", 
+"ltex"},
 })
 
 -- LSP setup with capabilities from nvim-cmp
@@ -61,7 +62,3 @@ cmp.setup.cmdline(':', {
     matching = { disallow_symbol_nonprefix_matching = false }
 })
 
-vim.lsp.set_log_level("debug")
-print(vim.lsp.get_log_path())
-print(vim.lsp.get_log_path())
-print(vim.lsp.get_log_path())

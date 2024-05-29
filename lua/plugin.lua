@@ -3,6 +3,7 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
+Plug("folke/tokyonight.nvim") -- colorscheme
 Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.6' }) -- 強化版nerdtree
 Plug('nvim-lua/plenary.nvim') -- telescopeに必要
 Plug('cohama/lexima.vim') -- 括弧補完
@@ -23,3 +24,5 @@ Plug('jupyter-vim/jupyter-vim') -- jupyterの対話環境
 Plug('vim-denops/denops.vim') -- plugin開発
 
 vim.call('plug#end')
+
+vim.cmd[[colorscheme tokyonight-moon]]

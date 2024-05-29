@@ -1,13 +1,13 @@
 local options = {
-	encoding = "utf-8", 
-	fileencoding = "utf-8", 
-	tabstop = 4, 
+	encoding = "utf-8",
+	fileencoding = "utf-8",
+	tabstop = 4,
 	shiftwidth = 4,
-	number = true, 
-	showmode = false, 
-	cursorline = true, 
-	termguicolors = true, 
-	clipboard = {"unnamedplus"}, 
+	number = true,
+	showmode = false,
+	cursorline = true,
+	termguicolors = true,
+	clipboard = {"unnamedplus"},
 }
 
 for key, value in pairs(options) do
