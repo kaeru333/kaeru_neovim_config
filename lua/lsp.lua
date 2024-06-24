@@ -3,26 +3,19 @@ require('mason').setup()
 
 -- Mason LSP Config setup
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "tsserver", "pyright", 
-"ltex"},
+    ensure_installed = { "lua_ls", "tsserver", "pyright", "ltex", "clangd"},
 })
+
+local lspconfig = require('lspconfig')
+lspconfig.lua_ls.setup({})
+lspconfig.lua_ls.setup({})
+lspconfig.tsserver.setup({})
+lspconfig.pyright.setup({})
+lspconfig.clangd.setup({})
 
 -- LSP setup with capabilities from nvim-cmp
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
--- LSP サーバーのセットアップ
-lspconfig.lua_ls.setup {
-    capabilities = capabilities,
-}
-
-lspconfig.tsserver.setup {
-    capabilities = capabilities,
-}
-
-lspconfig.pyright.setup {
-    capabilities = capabilities,
-}
 
 -- nvim-cmp setup
 local cmp = require('cmp')
